@@ -17,6 +17,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      - name: deps
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
       - name: go
         env:
           API_ID: ${{ secrets.API_ID }}
@@ -27,4 +31,9 @@ jobs:
           SB_KEY: ${{ secrets.SB_KEY }}
           SHARD: ${{ secrets.SHARD }}
           QUEUE_URL: ${{ secrets.QUEUE_URL }}
+          LINK_T: ${{ secrets.LINK_T }}
+          LINK_K: ${{ secrets.LINK_K }}
+          CAP_T: ${{ secrets.CAP_T }}
+          CAP_K: ${{ secrets.CAP_K }}
+          ST_DOC: ${{ secrets.ST_DOC }}
         run: python app.py
