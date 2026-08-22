@@ -39,4 +39,6 @@ jobs:
           CAP_K: ${{ secrets.CAP_K }}
           ST_DOC: ${{ secrets.ST_DOC }}
           MAX_EPS_RUN: ${{ secrets.MAX_EPS_RUN }}
+          KAT_BASE: ${{ secrets.KAT_BASE }}
+          KAT_TOKEN: ${{ secrets.KAT_TOKEN }}
         run: python app.py
