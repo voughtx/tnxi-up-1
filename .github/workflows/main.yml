@@ -36,4 +36,5 @@ jobs:
           CAP_T: ${{ secrets.CAP_T }}
           CAP_K: ${{ secrets.CAP_K }}
           ST_DOC: ${{ secrets.ST_DOC }}
+          MAX_EPS_RUN: ${{ secrets.MAX_EPS_RUN }}
         run: python app.py
